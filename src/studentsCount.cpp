@@ -34,7 +34,7 @@ void * studentsCount(int *Arr, int len, int score, int *lessCount, int *moreCoun
 	for (int mid = len / 2, first = 0, c = 0, found = 0; found == 0;){
 		if (score == Arr[mid]){
 			//if score found
-			if (score == Arr[mid - 1]){
+			if (score == Arr[mid - 1] || score == Arr[mid + 1]){
 				//if both values are same
 				*lessCount = 0;
 				*moreCount = 0;
